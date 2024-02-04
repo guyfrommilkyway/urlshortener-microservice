@@ -26,7 +26,7 @@ router.get('/api/shorturl/:url?', async (req, res) => {
 	try {
 		const { url } = req.params;
 
-		if (!url || !isValidUrlFormat(url)) throw new Error();
+		if (!url) throw new Error();
 
 		const originalUrl = await findUrl(url);
 
