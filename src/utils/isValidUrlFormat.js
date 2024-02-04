@@ -1,7 +1,8 @@
 const isValidUrlFormat = (url) => {
-	const urlPattern = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
+	const urlPattern =
+		/^(https?:\/\/)([a-zA-Z0-9-]+\.)[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
 
-	const url = 'http://www.example.com';
+	console.log(urlPattern.test(url));
 
 	return urlPattern.test(url);
 };
