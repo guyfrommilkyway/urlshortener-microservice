@@ -1,6 +1,5 @@
 const isValidUrlFormat = (url) => {
-	const urlPattern =
-		/^(https?:\/\/)([a-zA-Z0-9-]+\.)?[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
+	const urlPattern = /^(https?):\/\/[^\s\/$.?#].[^\s]*$/;
 
 	return urlPattern.test(url);
 };
